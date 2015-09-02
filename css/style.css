@@ -1,0 +1,57 @@
+/*
+ * Project: src
+ * File: style.css
+ *
+ * Copyright (c) 9/2015, Thang Bui - thang.buinguyen at gmail.com, - All Rights Reserved
+ *
+ * Free to use under the MIT license. Use at your own risk!!!!
+ *
+ * Last modified  9/2/15 11:09 AM
+ *
+ */
+
+#codelisting td {
+    white-space: pre-wrap;
+}
+
+#codelisting {
+    width: 100%;
+}
+
+#simulation {
+    width: 100%;
+    border: 1px solid #adadad;
+}
+
+#simulation td {
+    height: 25px;
+    text-align: center;
+    border: 1px solid #adadad;
+    padding: 4px;
+}
+
+.varLocation {
+    width: 7%;
+    font-size: 10px;
+    text-align: center;
+}
+
+.barItem {
+    background-color: blue;
+    height: 100%;
+}
+
+table, td {
+    width: 100%;
+    border: 1px solid #dcdcdc;
+}
+
+#swapNo td, #comparisonNo td {
+    height: 10px;;
+}
+
+.swapValue {
+    width: 7%;
+    text-align: center;
+    font-size: 10px;
+}

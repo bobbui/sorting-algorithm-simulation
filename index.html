@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<!--
+  ~ Project: src
+  ~ File: index.html
+  ~
+  ~ Copyright (c) 9/2015, Thang Bui - thang.buinguyen at gmail.com, - All Rights Reserved
+  ~
+  ~ Free to use under the MIT license. Use at your own risk!!!!
+  ~
+  ~ Last modified  9/2/15 11:09 AM
+  ~
+  -->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sorting Algorithm S</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <script type="text/javascript" src="js/code.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <h2 class="text-info">
+                Sorting Demonstration
+            </h2>
+            <dl>
+            </dl>
+            This page has visualizations of some comparison based sorting algorithms.
+            <dl>
+            </dl>
+            <a id="modal-343988" href="#modal-container-343988" role="button" class="btn" data-toggle="modal">Click here to
+                see instruction how to use system</a>
+
+            <div class="modal fade" id="modal-container-343988" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                Instruction to use system
+                            </h4>
+                        </div>
+                        <ul>
+                            <li>
+                                Click on<img alt="" src="/static/img/reload-24x24.gif"> above to restart the animations in a
+                                row, a column, or the entire table.
+                            </li>
+                            <li>
+                                Click directly on an animation image to start or restart it.
+                            </li>
+                            <li>
+                                Click on a problem size number to reset all animations.
+                            </li>
+                        </ul>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">OK</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-md-4 column">
+            <h3 class="text-primary">
+                Configuration
+            </h3>
+
+            <div class="row clearfix">
+                <div class="col-md-6 column">
+                    <span class="label label-default">Sorting Algorithm :</span>
+                </div>
+                <div class="col-md-6 column">
+                    <div id="algorName" class="btn-group">
+                        <button class="btn btn-default" data-toggle="dropdown"></button>
+                        <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span
+                                class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" data="name">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-6 column">
+                    <span class="label label-default">Data Type :</span>
+                </div>
+                <div class="col-md-6 column">
+                    <div class="btn-group">
+                        <button class="btn btn-default"></button>
+                        <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" data="type">
+                            <li>
+                                <a href="#">Bar</a>
+                            </li>
+                            <li>
+                                <a href="#">Word</a>
+                            </li>
+                            <li>
+                                <a href="#">Number</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-6 column">
+                    <span class="label label-default">List generation type :</span>
+                </div>
+                <div class="col-md-6 column">
+                    <div class="btn-group">
+                        <button class="btn btn-default"></button>
+                        <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" data="gentype">
+
+                            <li>
+                                <a href="#">Random</a>
+                            </li>
+                            <li>
+                                <a href="#">Nearly sorted</a>
+                            </li>
+                            <li>
+                                <a href="#">Sorted</a>
+                            </li>
+                            <li>
+                                <a href="#">Reversed order</a>
+                            </li>
+                            <li>
+                                <a href="#">Few distinct</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-6 column">
+                    <span class="label label-default">List size :</span>
+                </div>
+                <div class="col-md-6 column">
+                    <div class="btn-group">
+                        <button class="btn btn-default"></button>
+                        <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" data="size">
+                            <li>
+                                <a href="#">5</a>
+                            </li>
+                            <li>
+                                <a href="#">10</a>
+                            </li>
+                            <li>
+                                <a href="#">20</a>
+                            </li>
+                            <li>
+                                <a href="#">30</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-6 column">
+                    <span class="label label-default">Animation delay (ms) :</span>
+                </div>
+                <div class="col-md-6 column">
+                    <div class="btn-group">
+                        <button class="btn btn-default"></button>
+                        <button data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" data="delay">
+                            <li>
+                                <a href="#">50</a>
+                            </li>
+                            <li>
+                                <a href="#">100</a>
+                            </li>
+                            <li>
+                                <a href="#">200</a>
+                            </li>
+                            <li>
+                                <a href="#">300</a>
+                            </li>
+                            <li>
+                                <a href="#">500</a>
+                            </li>
+                            <li>
+                                <a href="#">700</a>
+                            </li>
+                            <li>
+                                <a href="#">1000</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-4 column">
+                </div>
+                <div class="col-md-4 column">
+                </div>
+                <div class="col-md-4 column">
+                </div>
+            </div>
+            <h4 class="text-primary">
+                Auto running
+            </h4>
+
+            <div class="row clearfix">
+                <div class="col-md-6 column">
+                    <button type="button" class="btn btn-primary" id="startautorun">Start Autorun</button>
+                </div>
+                <div class="col-md-6 column">
+                    <button type="button" class="btn btn-primary" id="restart">Reset</button>
+                </div>
+            </div>
+            <h4 class="text-primary">
+                Manual running
+            </h4>
+
+            <div class="row clearfix">
+                <div class="col-md-6 column">
+                    <button class="btn btn-primary" type="button" id="next">Next step</button>
+                </div>
+                <!--<div class="col-md-6 column">-->
+                <!--<button type="button" class="btn btn-primary">Previous step</button>-->
+                <!--</div>-->
+            </div>
+            <!--<button class="btn btn-primary" type="button">Scamble/Restart</button>-->
+        </div>
+        <div class="col-md-4 column">
+            <h3 class="text-primary">
+                Algorithm description
+            </h3>
+            <h4 class="text-primary" id="name">
+
+                Bubble sort
+            </h4>
+
+            <p class="text-primary">
+                <a href="https://cs.uwaterloo.ca/%7Ebwbecker/sortingDemo/BubbleSort2Algorithm.java"></a>
+            </p>
+
+            <p id="description">
+                Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that works by repeatedly
+                stepping through the list to be sorted, comparing each pair of adjacent items and swapping them if they are in
+                the wrong order.
+            </p>
+            <a href="" id="moreinfo">More info</a>
+
+            <p class="text-primary">
+                <br>
+            </p>
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th>
+                        Metric
+                    </th>
+                    <th>
+                        Value
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        Best case (big oh)
+                    </td>
+                    <td id="bestcase">
+                    </td>
+                </tr>
+                <tr class="active">
+                    <td>
+                        Average case (big oh)
+                    </td>
+                    <td id="averagecase">
+                    </td>
+                </tr>
+                <tr class="success">
+                    <td>
+                        Worst case (big oh)
+                    </td>
+                    <td id="worstcase">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <h4 class="text-primary">
+                Code listing
+            </h4>
+            <table class="code" id="codelisting">
+            </table>
+        </div>
+        <div class="col-md-4 column">
+            <h3 class="text-primary">
+                Simulation<br><br>
+            </h3>
+            <table id="simulation">
+            </table>
+            <br>
+            <h4 class="text-primary">
+                Swap square
+            </h4>
+
+            <div class="row clearfix">
+                <div class="col-md-6 column">
+                    <span class="label label-default">Number of swap</span>
+                </div>
+                <div class="col-md-6 column">
+                    <p id="totalSwapNo">
+                    </p>
+                </div>
+            </div>
+            <p>
+            <table id="swapNo">
+            </table>
+            </p>
+
+            <div class="row clearfix">
+                <div class="col-md-6 column">
+                    <span class="label label-default">Number of comparison</span>
+                </div>
+                <div class="col-md-6 column">
+                    <p id="totalComparisonNo">
+                    </p>
+                </div>
+            </div>
+            <p>
+            <table id="comparisonNo">
+            </table>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
